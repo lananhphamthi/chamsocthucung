@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #2a5fbd;
+}
+
+.logo-img {
+    width: 120px; /* Kích thước logo */
+    margin-right: 20px; /* Khoảng cách giữa logo và chữ DOGGY */
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav a {
+    margin: 0 30px;
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 20px;
+}
+
+.nav a.active {
+    color: #2a5fbd; /* Màu xanh cho trang hiện tại */
+}
+
+/* Hover effect cho các liên kết trong menu */
+.nav a:hover {
+    color: #2a5fbd;
+}
+
+/* Nút Talk */
+.talk-button {
+    background-color: #2a5fbd;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.talk-button:hover {
+    background-color: #1d4591; /* Thay đổi màu nền khi hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    .talk-button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    background-color: #ffffff;
+}
+.hero h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+}
+.hero-text {
+    width: 40%;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    color: #2a5fbd;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.hero-image {
+    position: relative;
+    width: 40%;
+    height: 600px;
+
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* Styling the review boxes */
+.review {
+    position: absolute;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+    max-width: 45%;
+    font-size: 0.9rem; /* Tùy chỉnh kích thước chữ */
+    line-height: 1.4; /* Giãn dòng để nhìn rõ ràng hơn */
+}
+
+.review-top-left {
+    top: 40%;
+    left: 0%;
+}
+
+.review-bottom-right {
+    bottom: 10%;
+    right: 10%;
+}
+ 
+/*Dịch vụ*/
+/* Style chung cho các service */
+.service {
+    position: relative;
+    width: 70%; /* Chiếm 60% diện tích màn hình */
+    height: 450px; /* Chiều cao cố định cho mỗi ảnh nền */
+    background-size: cover; /* Làm cho ảnh nền bao phủ hết phần tử */
+    background-position: center; /* Căn giữa ảnh nền */
+    margin-bottom: 100px; /* Khoảng cách giữa các ảnh nền */
+    border-radius: 20px;
+    margin: 0 auto; /* Căn giữa phần tử .service trên trang */
+}
+
+/* Style cho chữ chèn lên ảnh nền */
+.text-overlay {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 50%; /* Chữ chiếm 40% diện tích */
+    height: 100%; /* Chiều cao chiếm 80% của phần ảnh nền */
+    padding: 20px;
+    color: #5d75d6; /* Màu chữ trắng để nổi bật trên nền */
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+}
+
+/* Định dạng cho tiêu đề */
+.text-overlay h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Định dạng cho đoạn mô tả */
+.text-overlay p {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* Định dạng cho giá */
+.text-overlay span {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 90px;
+    color: #f5a623; /* Thay màu chữ của giá cho rõ ràng */
+}
+
+/* Style cho nút "Đặt lịch ngay!" */
+.text-overlay .btn {
+    position: absolute; /* Đặt nút "Đặt lịch ngay!" ở vị trí tuyệt đối */
+    bottom: 120px; /* Đưa nút xuống dưới cùng */
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #2a5fbd;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.text-overlay .btn:hover {
+    background-color: #1d4591;
+}
+
+
+/* Hiệu ứng hover cho nút */
+.text-overlay .btn:hover {
+    background-color: #1d4591;
+}
+
+/* Responsive: Điều chỉnh cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .service {
+        width: 48%; /* Hiển thị 2 ảnh trên mỗi dòng cho màn hình nhỏ hơn */
+    }
+}
+
+@media (max-width: 480px) {
+    .service {
+        width: 100%; /* Hiển thị 1 ảnh trên mỗi dòng cho màn hình rất nhỏ */
+    }
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    position: relative;
+}
+
+/* Phần nền trắng */
+.white-background {
+    background-color: #fff;
+    height: 50vh; /* Chiều cao 50% của chiều cao màn hình */
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+/* Phần vệt xanh */
+.green-stripe {
+    background-color: #2a5fbd;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    z-index: 0;
+}
+
+/* Hình ảnh chèn lên trên cả phần trắng và xanh */
+.image-overlay {
+    position: absolute;
+    top: -25vh; /* Dịch ảnh lên để chiếm nhiều diện tích hơn trên nền xanh */
+    left: 50%;
+    transform: translateX(-50%); /* Căn giữa ảnh theo chiều ngang */
+    z-index: 1;
+    width: 50%; /* Tăng chiều rộng ảnh lên 50% */
+    max-width: 700px; /* Đặt chiều rộng tối đa của ảnh */
+}
+
+.image-overlay img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+/* Hiệu ứng nổi lên khi di chuột vào */
+.image-overlay:hover img {
+    transform: scale(1.05); /* Phóng to ảnh lên 5% */
+}
+/* Phần nền trắng bên dưới */
+/* Footer Container */
+.footer-container {
+    background-color: #fff; /* Nền trắng cho phần footer */
+    display: flex;
+    justify-content: space-between; /* Chia phần logo và thông tin liên hệ thành 2 phần riêng biệt */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    padding: 5px 40px; /* Giảm khoảng cách trong footer */
+    box-sizing: border-box;
+}
+
+/* Logo và tên thương hiệu */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Giảm khoảng cách giữa logo và thông tin liên hệ */
+}
+
+.footer-logo .logo-img {
+    width: 200px; /* Kích thước logo nhỏ hơn để gần hơn */
+    margin-right: 5px; /* Giảm khoảng cách giữa logo và tên */
+}
+
+.footer-logo h3 {
+    font-size: 28px;
+    color: #2a5fbd; /* Màu chữ của tên thương hiệu */
+    font-weight: bold;
+}
+
+/* Thông tin liên hệ */
+.footer-info {
+    text-align: left; /* Căn trái phần thông tin */
+    font-size: 20px;
+    color: #555; /* Màu chữ của thông tin liên hệ */
+}
+
+.footer-info p {
+    margin: 10px; /* Loại bỏ khoảng cách giữa các dòng thông tin */
+}
+
+/* Responsive: Điều chỉnh khi màn hình nhỏ */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Xếp các phần tử thành cột khi màn hình nhỏ */
+        text-align: center; /* Căn giữa các phần tử */
+    }
+
+    .footer-info {
+        text-align: center; /* Căn giữa thông tin liên hệ */
+        margin-top: 10px;
+    }
+}
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-bottom: 10px; /* Tăng khoảng cách dưới để cân đối hơn */
+    font-size: 14px;
+    text-align: center;
+    color: #4854c1;
+}
+
+.footer-bottom a {
+    color: #5258b3;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.footer-bottom a:hover {
+    color: #0047ba;
+}
+
+/* Footer social icons */
+.footer-social-icons {
+    margin-top: 30px; /* Điều chỉnh margin-top để các icon không bị xa quá */
+    text-align: center;
+}
+
+.footer-social-icons a {
+    margin: 0 12px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+    transform: scale(1.15);
+}
+
+.footer-social-icons img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}

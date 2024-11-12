@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #2a5fbd;
+}
+
+.logo-img {
+    width: 120px; /* Kích thước logo */
+    margin-right: 20px; /* Khoảng cách giữa logo và chữ DOGGY */
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav a {
+    margin: 0 30px;
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 20px;
+}
+
+.nav a.active {
+    color: #2a5fbd; /* Màu xanh cho trang hiện tại */
+}
+
+/* Hover effect cho các liên kết trong menu */
+.nav a:hover {
+    color: #2a5fbd;
+}
+
+/* Nút Talk */
+.talk-button {
+    background-color: #2a5fbd;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.talk-button:hover {
+    background-color: #1d4591; /* Thay đổi màu nền khi hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    .talk-button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Căn nội dung về phía bên trái */
+    padding: 40px; /* Tạo khoảng trống cho nội dung từ mép trái */
+    background-image: url('./images/serbanner.png'); /* Thay đổi đường dẫn tới hình ảnh của bạn */
+    background-size: cover; /* Ảnh phủ kín toàn bộ vùng hero */
+    background-position: center; /* Ảnh căn giữa */
+    background-repeat: no-repeat; /* Không lặp ảnh */
+    width: 100%;
+    height: 400px; /* Điều chỉnh chiều cao hero tùy ý */
+    color: #ffffff; /* Màu chữ trắng để nổi bật trên nền ảnh */
+}
+
+.hero-text {
+    max-width: 40%; /* Đảm bảo văn bản không quá rộng */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    color: #ffffff; /* Đảm bảo màu chữ trắng trên nền ảnh */
+    padding-left: 80px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    color: #2a5fbd; /* Giữ nguyên màu chữ */
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 16px;
+    color: #000000; /* Màu đen */
+    margin-top: 10px; /* Khoảng cách giữa tiêu đề và đoạn mô tả */
+    margin-bottom: 15px; /* Khoảng cách giữa đoạn mô tả và nút */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #40e0d0; /* Màu xanh ngọc */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #20b2aa;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+    background-color: #1e8c7a;
+}
+.hero {
+    background-image: url('./images/detail1.png'); /* Đường dẫn đến ảnh nền */
+    background-size: cover; /* Ảnh phủ kín toàn bộ vùng hero */
+    background-position: center; /* Ảnh căn giữa */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    width: 100%;
+    height: 600px; /* Chiều cao vùng nền */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Căn nội dung về phía bên trái */
+    padding: 40px; /* Khoảng trống để văn bản không sát mép */
+    color: #ffffff; /* Màu chữ trắng trên nền */
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between; /* Chia bố cục thành 2 phần */
+    padding: 40px;
+    width: 80%; /* Chiếm 80% chiều rộng màn hình */
+    margin: 0 auto; /* Căn giữa nội dung */
+}
+
+.contact-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Tạo bố cục 2x2 */
+    grid-gap: 20px; /* Khoảng cách giữa các ô */
+    width: 48%; /* Chiếm 48% chiều rộng phần trái */
+}
+
+.contact-box {
+    position: relative; /* Để chèn chữ lên ảnh */
+    background-color: #ffffff; /* Màu nền trắng cho các ô */
+    border-radius: 8px; /* Bo góc cho các ô */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng cho các ô */
+    overflow: hidden; /* Giới hạn phạm vi của ảnh khi phóng to */
+    transition: transform 0.3s ease-in-out; /* Hiệu ứng phóng to khi di chuột */
+}
+
+.contact-box:hover {
+    transform: scale(1.05); /* Phóng to ảnh khi di chuột vào */
+}
+
+.contact-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Đảm bảo ảnh chiếm hết chiều cao của ô */
+}
+
+.contact-img {
+    width: 100%; /* Ảnh chiếm 100% chiều rộng */
+    height: 100%; /* Ảnh chiếm 100% chiều cao */
+    object-fit: cover; /* Cắt và bao phủ toàn bộ khung */
+    border-radius: 5px; /* Bo góc cho ảnh */
+}
+
+.contact-text1 {
+    position: absolute; /* Đặt chữ lên ảnh */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Căn chính xác giữa */
+    color: #ffffff; /* Màu chữ trắng */
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+    text-align: center; /* Căn giữa văn bản */
+    width: 80%; /* Chiếm 80% chiều rộng của ô */
+    height: 80%; /* Chiếm 80% chiều cao của ô */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px; /* Giữ bo góc cho khối chữ */
+    box-sizing: border-box;
+}
+.contact-text2 {
+    position: absolute; /* Đặt chữ lên ảnh */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Căn chính xác giữa */
+    color: #4058c0; /* Màu chữ trắng */
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+    text-align: center; /* Căn giữa văn bản */
+    width: 80%; /* Chiếm 80% chiều rộng của ô */
+    height: 80%; /* Chiếm 80% chiều cao của ô */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px; /* Giữ bo góc cho khối chữ */
+    box-sizing: border-box;
+}
+.contact-right {
+    width: 48%; /* Chiếm 48% chiều rộng phần phải */
+}
+
+.contact-right h2 {
+    font-size: 36px;
+    color: #2a5fbd;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-right p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+/* Footer */
+.footer {
+    width: 100%;
+    position: relative;
+}
+
+/* Phần nền trắng */
+.white-background {
+    background-color: #fff;
+    height: 50vh; /* Chiều cao 50% của chiều cao màn hình */
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+/* Phần vệt xanh */
+.green-stripe {
+    background-color: #2a5fbd;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    z-index: 0;
+}
+
+/* Hình ảnh chèn lên trên cả phần trắng và xanh */
+.image-overlay {
+    position: absolute;
+    top: -25vh; /* Dịch ảnh lên để chiếm nhiều diện tích hơn trên nền xanh */
+    left: 50%;
+    transform: translateX(-50%); /* Căn giữa ảnh theo chiều ngang */
+    z-index: 1;
+    width: 50%; /* Tăng chiều rộng ảnh lên 50% */
+    max-width: 700px; /* Đặt chiều rộng tối đa của ảnh */
+}
+
+.image-overlay img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+/* Hiệu ứng nổi lên khi di chuột vào */
+.image-overlay:hover img {
+    transform: scale(1.05); /* Phóng to ảnh lên 5% */
+}
+/* Phần nền trắng bên dưới */
+/* Footer Container */
+.footer-container {
+    background-color: #fff; /* Nền trắng cho phần footer */
+    display: flex;
+    justify-content: space-between; /* Chia phần logo và thông tin liên hệ thành 2 phần riêng biệt */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    padding: 5px 40px; /* Giảm khoảng cách trong footer */
+    box-sizing: border-box;
+}
+
+/* Logo và tên thương hiệu */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Giảm khoảng cách giữa logo và thông tin liên hệ */
+}
+
+.footer-logo .logo-img {
+    width: 200px; /* Kích thước logo nhỏ hơn để gần hơn */
+    margin-right: 5px; /* Giảm khoảng cách giữa logo và tên */
+}
+
+.footer-logo h3 {
+    font-size: 28px;
+    color: #2a5fbd; /* Màu chữ của tên thương hiệu */
+    font-weight: bold;
+}
+
+/* Thông tin liên hệ */
+.footer-info {
+    text-align: left; /* Căn trái phần thông tin */
+    font-size: 20px;
+    color: #555; /* Màu chữ của thông tin liên hệ */
+}
+
+.footer-info p {
+    margin: 10px; /* Loại bỏ khoảng cách giữa các dòng thông tin */
+}
+
+/* Responsive: Điều chỉnh khi màn hình nhỏ */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Xếp các phần tử thành cột khi màn hình nhỏ */
+        text-align: center; /* Căn giữa các phần tử */
+    }
+
+    .footer-info {
+        text-align: center; /* Căn giữa thông tin liên hệ */
+        margin-top: 10px;
+    }
+}
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-bottom: 10px; /* Tăng khoảng cách dưới để cân đối hơn */
+    font-size: 14px;
+    text-align: center;
+    color: #4854c1;
+}
+
+.footer-bottom a {
+    color: #5258b3;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.footer-bottom a:hover {
+    color: #0047ba;
+}
+
+/* Footer social icons */
+.footer-social-icons {
+    margin-top: 30px; /* Điều chỉnh margin-top để các icon không bị xa quá */
+    text-align: center;
+}
+
+.footer-social-icons a {
+    margin: 0 12px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+    transform: scale(1.15);
+}
+
+.footer-social-icons img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
