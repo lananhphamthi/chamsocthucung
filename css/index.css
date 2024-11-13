@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* Basic reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+/* Header styling */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #224d98;
+}
+
+.logo-img {
+    width: 140px;
+    /* Kích thước logo */
+    margin-right: 20px;
+    /* Khoảng cách giữa logo và chữ DOGGY */
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav a {
+    margin: 0 30px;
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 20px;
+}
+
+.nav a.active {
+    color: #224d98;
+    /* Màu xanh cho trang hiện tại */
+}
+
+
+/* Hover effect cho các liên kết trong menu */
+
+.nav a:hover {
+    color: #224d98;
+}
+
+
+/* Nút Talk */
+
+.talk-button {
+    background-color: #224d98;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.talk-button:hover {
+    background-color: #1d4591;
+    /* Thay đổi màu nền khi hover */
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    .talk-button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+
+/* Hero Section */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+.hero-content h2 {
+    font-size: 40px;
+    color: #224d98;
+    margin-bottom: 15px;
+    margin-left: 80px;
+    width: 80%;
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 25px;
+    margin-left: 80px;
+    width: 80%;
+}
+
+.hero-content button {
+    padding: 20px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    background-color: #8ee2df;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 80px;
+}
+
+.hero-images {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-images img {
+    width: 100%;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    margin-left: 40px;
+}
+
+
+/* Banner Section */
+
+.banner {
+    width: 100%;
+    padding: 30px;
+    background-color: #fff;
+}
+
+.banner img {
+    width: 80%;
+    height: auto;
+    max-height: 600px;
+    /* Đặt chiều cao tối đa để ảnh không quá lớn */
+    object-fit: cover;
+    /* Giúp ảnh phủ đầy khu vực */
+    border-radius: 30px;
+}
+
+
+/* Services Section */
+
+.services {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.services-content {
+    display: flex;
+    width: 100%;
+    gap: 100px;
+}
+
+.services-text {
+    flex: 1;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.services-text h3 {
+    font-size: 35px;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.learn-more-btn {
+    background-color: #2b5598;
+    /* Màu xanh dương đậm */
+    color: #fff;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.learn-more-btn:hover {
+    background-color: #003d80;
+}
+
+.service-cards {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-right: 10px;
+}
+
+.service-card {
+    border: 1px solid #8ee2df;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.service-card h4 {
+    font-size: 18px;
+    color: #1a4ea3;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.service-card a {
+    color: #1a4ea3;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.service-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* Booking Section */
+
+.booking {
+    background-color: #234d8f;
+    padding: 30px 10%;
+    display: flex;
+}
+
+.booking-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    height: 300px;
+    gap: 50px;
+}
+
+.booking-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.booking-image img {
+    width: 100%;
+    max-width: 250px;
+    /* Điều chỉnh kích thước ảnh cho phù hợp */
+    border-radius: 8px;
+}
+
+.booking-text {
+    flex: 2;
+    text-align: center;
+    color: #ffffff;
+}
+
+.booking-text h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.booking-text p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.booking-btn {
+    background-color: #8ee2df;
+    color: #000000;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.booking-btn:hover {
+    background-color: #8ee2df;
+}
+
+
+/* Footer */
+
+.footer-container {
+    background-color: #fff;
+    /* Nền trắng cho phần footer */
+    display: flex;
+    justify-content: space-between;
+    /* Chia phần logo và thông tin liên hệ thành 2 phần riêng biệt */
+    align-items: center;
+    /* Căn giữa các phần tử theo chiều dọc */
+    padding: 10px 40px;
+    /* Giảm khoảng cách trong footer */
+    box-sizing: border-box;
+    height: 200px;
+}
+
+
+/* Logo và tên thương hiệu */
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    /* Giảm khoảng cách giữa logo và thông tin liên hệ */
+}
+
+.footer-logo .logo-img {
+    width: 150px;
+    /* Kích thước logo nhỏ hơn để gần hơn */
+    margin-right: 5px;
+    /* Giảm khoảng cách giữa logo và tên */
+}
+
+.footer-logo h3 {
+    font-size: 30px;
+    color: #234d8f;
+    /* Màu chữ của tên thương hiệu */
+    font-weight: bold;
+}
+
+
+/* Thông tin liên hệ */
+
+.footer-info {
+    text-align: left;
+    /* Căn trái phần thông tin */
+    font-size: 20px;
+    color: #555;
+    /* Màu chữ của thông tin liên hệ */
+}
+
+.footer-info p {
+    margin: 10px;
+    /* Loại bỏ khoảng cách giữa các dòng thông tin */
+}
+
+
+/* Responsive: Điều chỉnh khi màn hình nhỏ */
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        /* Xếp các phần tử thành cột khi màn hình nhỏ */
+        text-align: center;
+        /* Căn giữa các phần tử */
+    }
+    .footer-info {
+        text-align: center;
+        /* Căn giữa thông tin liên hệ */
+        margin-top: 10px;
+    }
+}
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-bottom: 10px;
+    /* Tăng khoảng cách dưới để cân đối hơn */
+    font-size: 14px;
+    text-align: center;
+    color: #4854c1;
+}
+
+.footer-bottom a {
+    color: #5258b3;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.footer-bottom a:hover {
+    color: #0047ba;
+}
+
+
+/* Footer social icons */
+
+.footer-social-icons {
+    margin-top: 30px;
+    /* Điều chỉnh margin-top để các icon không bị xa quá */
+    text-align: center;
+}
+
+.footer-social-icons a {
+    margin: 0 12px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+    transform: scale(1.15);
+}
+
+.footer-social-icons img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
